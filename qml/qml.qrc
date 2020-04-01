@@ -1,0 +1,43 @@
+<RCC>
+    <qresource prefix="/qml">
+        <file>main.qml</file>
+        <file>vehicle_details/VehicleDetailsWindow.qml</file>
+        <file>vehicle_details/MissionControlsPane.qml</file>
+        <file>vehicle_details/MissionTable.qml</file>
+        <file>vehicle_details/StatusSection.qml</file>
+        <file>vehicles_overview/VehiclesOverviewWindow.qml</file>
+        <file>Section.qml</file>
+        <file>vehicles_overview/VehicleOverviewSection.qml</file>
+        <file>vehicle_details/VehicleSettingsSection.qml</file>
+        <file>vehicle_details/VehicleActionsSection.qml</file>
+        <file>vehicle_details/VehicleCommunicationsSection.qml</file>
+        <file>vehicle_details/VehicleStatusSection.qml</file>
+        <file>vehicle_details/VehicleMissionSection.qml</file>
+        <file>vehicle_details/MissionDataDelegate.qml</file>
+        <file>vehicle_details/MissionDiveDelegate.qml</file>
+        <file>vehicle_details/MissionNumberDelegate.qml</file>
+        <file>map/MapDisplayPane.qml</file>
+        <file>vehicle_details/MissionSettingsPopup.qml</file>
+        <file>vehicle_details/MissionDefaultsDelegate.qml</file>
+        <file>GamepadConnection.qml</file>
+        <file>vehicle_details/MissionDelegate.qml</file>
+        <file>vehicle_details/PointDelegate.qml</file>
+        <file>vehicle_details/TaskInfoDelegate.qml</file>
+        <file>vehicle_details/PointsTable.qml</file>
+        <file>vehicle_details/PointDataDelegate.qml</file>
+        <file>vehicle_details/PointNumberDelegate.qml</file>
+        <file>vehicle_details/TaskSettingsSection.qml</file>
+        <file>vehicle_details/TaskPointsSection.qml</file>
+        <file>vehicle_details/TaskPrimitiveSection.qml</file>
+        <file>vehicle_details/TaskProgressSection.qml</file>
+        <file>vehicle_details/VehicleGeofenceSection.qml</file>
+        <file>vehicle_details/GeofenceTable.qml</file>
+        <file>vehicle_details/VehicleParameterSection.qml</file>
+        <file>vehicle_details/ParameterControlsPane.qml</file>
+        <file>vehicle_details/ParameterTable.qml</file>
+        <file>vehicle_details/ParameterDataDelegate.qml</file>
+        <file>vehicle_details/ParameterLabelDelegate.qml</file>
+        <file>vehicle_details/GeofenceControlsPane.qml</file>
+        <file>vehicle_details/PointCommandDelegate.qml</file>
+    </qresource>
+</RCC>

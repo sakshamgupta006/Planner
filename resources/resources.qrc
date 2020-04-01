@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/resources">
+        <file>AppIcon.png</file>
+        <file>add_button.png</file>
+        <file>gps_icon.png</file>
+        <file>add_button_black.png</file>
+        <file>unreal.png</file>
+    </qresource>
+    <qresource prefix="/"/>
+</RCC>
