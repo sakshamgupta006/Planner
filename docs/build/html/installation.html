@@ -37,6 +37,7 @@
   <link rel="stylesheet" href="_static/main_stylesheet.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="getting_started.html" />
     <link rel="prev" title="Introduction" href="index.html" /> 
 </head>
 
@@ -87,7 +88,13 @@
               <p class="caption"><span class="caption-text">INSTALLATION</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#for-development">For Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#for-development">For Development</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-1-download-and-install-qt">Step:1 : Download and Install Qt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-download-and-setup-arcgis">Step:2 : Download and Setup ArcGIS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-3-download-mission-control">Step:3 : Download Mission Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-4-setup-mission-control-using-qt">Setup:4 : Setup Mission Control using Qt</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -158,11 +165,56 @@
 <div class="section" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
 <p>Mission Control can be built from source as well as installed as a dynamically
-and statically linked binary. The For Development Subsection: <span class="xref std std-ref">RST Installation Development</span></p>
+and statically linked binary. The <a class="reference internal" href="#rst-installation-development"><span class="std std-ref">For Development</span></a> Subsection describes
+how the application can be installed for development purposes.</p>
+<p>We also provide a pre-built application image which does not require any installation. These
+can be downloaded here. &lt;TODO INSERT LINK&gt;</p>
 <div class="section" id="for-development">
-<h2>For Development<a class="headerlink" href="#for-development" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">xtensor</span>
+<span id="rst-installation-development"></span><h2>For Development<a class="headerlink" href="#for-development" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="step-1-download-and-install-qt">
+<h3>Step:1 : Download and Install Qt<a class="headerlink" href="#step-1-download-and-install-qt" title="Permalink to this headline">¶</a></h3>
+<p>Please download any version of Qt &gt; 5.12 from here: <a class="reference external" href="https://www.qt.io/download-open-source">Qt Download Page</a>. Also install the
+latest version of Qt Creator which will be bundled with the Qt installer.
+If you are using the online installer Qt will download a <strong>.run</strong> file on your system. To run open
+a terminal in the download file location and run:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="n">a</span><span class="o">+</span><span class="n">x</span> <span class="n">qt_installer</span><span class="p">.</span><span class="n">run</span>
+<span class="p">.</span><span class="o">/</span><span class="n">qt_installer</span><span class="p">.</span><span class="n">run</span>
 </pre></div>
+</div>
+</div>
+<div class="section" id="step-2-download-and-setup-arcgis">
+<h3>Step:2 : Download and Setup ArcGIS<a class="headerlink" href="#step-2-download-and-setup-arcgis" title="Permalink to this headline">¶</a></h3>
+<p>To compile and effectively use the Mission Control we also need to setup ArcGIS.
+Download <a class="reference external" href="https://developers.arcgis.com/qt/latest/">ArcGIS 100.5</a>. You might need a
+developer account to download the setup. Please create one <a class="reference external" href="https://developers.arcgis.com/sign-in/">here</a>.</p>
+<p>Once logged in, download ArcGIS 100.5 for your specific OS.
+Extract the tar.gz using the following command:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="o">-</span><span class="n">xf</span> <span class="n">ArcGIS_Runtime_SDK_Qt_Linux64_100_5_0</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+<p>from the extracted directory run:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="o">/</span><span class="n">Setup</span>
+</pre></div>
+</div>
+<p>Follow the instructions to install ArcGIS.
+For the post installer select the following:</p>
+<img alt="_images/postinstall.png" src="_images/postinstall.png" />
+<p>Enter the location of Qt Creator and qmake binaries from your system.
+<strong>Note:</strong> Qt Creator is generally located in <em>/home/user/Qt/Tools/QtCreator/bin/qtcreator</em>.</p>
+<img alt="_images/postinstall1.png" src="_images/postinstall1.png" />
+</div>
+<div class="section" id="step-3-download-mission-control">
+<h3>Step:3 : Download Mission Control<a class="headerlink" href="#step-3-download-mission-control" title="Permalink to this headline">¶</a></h3>
+<p>You can clone the Mission Control Application using:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="nl">https</span><span class="p">:</span><span class="c1">//ascl2.ece.vt.edu/avl/avl_gui_new</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="setup-4-setup-mission-control-using-qt">
+<h3>Setup:4 : Setup Mission Control using Qt<a class="headerlink" href="#setup-4-setup-mission-control-using-qt" title="Permalink to this headline">¶</a></h3>
+<p>Open the QtCreator, From File, select Open a project, navigate to the cloned mission control
+folder and select the avl_gui_new.pro file. Configure the file with desktop setting in Qt.
+Build and Run.</p>
 </div>
 </div>
 </div>
@@ -174,6 +226,8 @@ and statically linked binary. The For Development Subsection: <span class="xref 
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="getting_started.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
